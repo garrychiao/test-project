@@ -16,26 +16,31 @@
 
 <body>
     <h2>this is test</h2>
-    <button onclick="share()">share</button>
+    <button onclick="share('han_circle.png')">share</button>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
-    function share () {
+        function share(ogURL) {
 
-        var title = '超市減塑，誰當先鋒 | 綠色和平';
-        var text = '立即投票，讓你最支持的零售商，實踐減塑！';
-        var url = window.location.href;
+            $("meta[property='og\\:title']").attr("content", ogURL);
 
-        if (navigator.share) {
-            navigator.share({
-                title,
-                text,
-                url,
-            }).then(() => console.log('Successful share'))
-            .catch((error) => console.log('Error sharing', error));
-        } else {
-            // console.log(url)
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "pop", "width=600, height=400, scrollbars=no");
+            var title = '超市減塑，誰當先鋒 | 綠色和平';
+            var text = '立即投票，讓你最支持的零售商，實踐減塑！';
+            var url = window.location.href;
+
+            if (navigator.share) {
+                navigator.share({
+                        title,
+                        text,
+                        url,
+                    }).then(() => console.log('Successful share'))
+                    .catch((error) => console.log('Error sharing', error));
+            } else {
+                // console.log(url)
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "pop",
+                    "width=600, height=400, scrollbars=no");
+            }
         }
-    }
     </script>
 </body>
 
