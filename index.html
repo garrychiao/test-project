@@ -6,11 +6,11 @@
     <meta property="og:title" content="要求 2020 總統候選人 提出氣候與永續能源政見" />
     <meta property="og:description"
         content="高溫、強颱、暴雨侵襲，氣候危機真的來了！臺灣的總統候選人準備好了嗎？身為選民，別再繼續當客廳裡的北極熊。我們有權要求候選人提出積極、務實的氣候與永續能源政見，以法律、政策來對抗氣候危機，推動環保價值。" />
-    <meta name="description"
-        content="高溫、強颱、暴雨侵襲，氣候危機真的來了！臺灣的總統候選人準備好了嗎？身為選民，別再繼續當客廳裡的北極熊。我們有權要求候選人提出積極、務實的氣候與永續能源政見，以法律、政策來對抗氣候危機，推動環保價值。" />
     <meta property="og:image" content="https://change.greenpeace.org.tw/2019/climate-emergency/imgs/fb_share.png" />
-    <link rel="canonical" href="https://act.greenpeace.org/page/48800/petition/1?locale=zh-TW" />
     <meta property="og:url" content="https://act.greenpeace.org/page/48800/petition/1?locale=zh-TW" />
+    <meta name="description"
+    content="高溫、強颱、暴雨侵襲，氣候危機真的來了！臺灣的總統候選人準備好了嗎？身為選民，別再繼續當客廳裡的北極熊。我們有權要求候選人提出積極、務實的氣候與永續能源政見，以法律、政策來對抗氣候危機，推動環保價值。" />
+    <link rel="canonical" href="https://act.greenpeace.org/page/48800/petition/1?locale=zh-TW" />
     <link rel="image_src" href="https://change.greenpeace.org.tw/2019/climate-emergency/imgs/fb_share.png" />
 </head>
 
@@ -23,6 +23,7 @@
         function share(ogURL) {
 
             $("meta[property='og\\:image']").attr("content", "https://change.greenpeace.org.tw/2019/climate-emergency/imgs/" + ogURL);
+            $("meta[property='og\\:url']").attr("content", window.location.href);
 
             var title = '超市減塑，誰當先鋒 | 綠色和平';
             var text = '立即投票，讓你最支持的零售商，實踐減塑！';
