@@ -37,7 +37,7 @@
                     }).then(() => console.log('Successful share'))
                     .catch((error) => console.log('Error sharing', error));
             } else {
-                // console.log(url)
+                console.log(`https://www.facebook.com/sharer/sharer.php?u=${url}`);
                 window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "pop",
                     "width=600, height=400, scrollbars=no");
             }
